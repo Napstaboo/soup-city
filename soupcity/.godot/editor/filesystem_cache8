@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1745456331
+::res://::1745456439
 carrot1.png::CompressedTexture2D::7075686119200930536::1743469584::1743469589::1::::<><>::
-Game.tscn::PackedScene::8504220380337915060::1745456198::0::1::::<><>::uid://b01pqmkcjf2gu::::res://Scenes/Player/player.tscn<>uid://bnhk5ow18xlyu::::res://Scenes/Settings.tscn<>uid://dijiulsu0xh5q::::res://Scenes/Enemy1.tscn<>uid://bmeh057vd3img::::res://Scenes/camera_2d.tscn
+Game.tscn::PackedScene::8504220380337915060::1745456334::0::1::::<><>::uid://b01pqmkcjf2gu::::res://Scenes/Player/player.tscn<>uid://bnhk5ow18xlyu::::res://Scenes/Settings.tscn<>uid://dijiulsu0xh5q::::res://Scenes/Enemy1.tscn<>uid://bmeh057vd3img::::res://Scenes/camera_2d.tscn
 ::res://Assets/::1744945467
 Carrot.png::CompressedTexture2D::6685482183698062375::1739001970::1743469338::1::::<><>::
 char1.png::CompressedTexture2D::4372938189633809524::1738140316::1743469338::1::::<><>::
@@ -27,19 +27,19 @@ head.PNG::CompressedTexture2D::805697997376316048::1745014190::1745014191::1::::
 0009.png::CompressedTexture2D::4663673490746334359::1745008376::1745008381::1::::<><>::
 arm.PNG::CompressedTexture2D::2110329599528610748::1744944500::1744945510::1::::<><>::
 eyes.PNG::CompressedTexture2D::4321904462736420053::1744944500::1744945510::1::::<><>::
-::res://Scenes/::1745456199
-Bullet.tscn::PackedScene::5470692449655212325::1745456199::0::1::::<><>::uid://c2iq6drp743uh::::res://Assets/Carrot.png<>res://Scripts/bullet.gd
+::res://Scenes/::1745456334
+Bullet.tscn::PackedScene::5470692449655212325::1745456334::0::1::::<><>::uid://c2iq6drp743uh::::res://Assets/Carrot.png<>res://Scripts/bullet.gd
 camera_2d.tscn::PackedScene::3237415608256225134::1739616484::0::1::::<><>::
-Enemy1.tscn::PackedScene::7739874258296690928::1745456198::0::1::::<><>::res://Scripts/Enemy/enemy.gd<>uid://bfwxbcsn2ecaa::::res://Assets/Elf.png<>uid://cany8ud00n0kd::::res://Scenes/Enemies/Enemy1.tres
+Enemy1.tscn::PackedScene::7739874258296690928::1745456334::0::1::::<><>::res://Scripts/Enemy/enemy.gd<>uid://bfwxbcsn2ecaa::::res://Assets/Elf.png<>uid://cany8ud00n0kd::::res://Scenes/Enemies/Enemy1.tres
 Settings.tscn::PackedScene::3313987809549688824::1738378095::0::1::::<><>::res://Scripts/settings.gd
-::res://Scenes/Enemies/::1745456199
+::res://Scenes/Enemies/::1745456334
 Enemy1.tres::Resource/EnemyStats::4801195473485486227::1745098267::0::1::::<><>::uid://cj7brgg78ryi4::::res://Scenes/Bullet.tscn<>res://Scripts/Custom Resources/enemy_resource.gd<>uid://c3bkwu3gt4w2t::::res://Assets/Animations/Enemy1/body.PNG
-EnemyAnimation.tscn::PackedScene::975126940687745203::1745456199::0::1::::<><>::res://Scripts/Enemy/enemy_animation.gd<>uid://cany8ud00n0kd::::res://Scenes/Enemies/Enemy1.tres<>uid://lqjy06hkhjk7::::res://Assets/Animations/Enemy1/head.PNG<>uid://b6nub7uyy7y6n::::res://Assets/Animations/Enemy1/arm.PNG<>uid://b15vrubnd3cru::::res://Assets/Animations/Enemy1/foot 1.PNG<>uid://bja712vhbpwh0::::res://Assets/Animations/Enemy1/foot 2.PNG
-::res://Scenes/Player/::1745456199
-eyes.tscn::PackedScene::1693711392148441712::1745456199::0::1::::<><>::uid://b2tteueryk8of::::res://Assets/Animations/Player/eyes.PNG<>res://Scripts/eyes.gd
-player.tscn::PackedScene::4195755569674811844::1745456198::0::1::::<><>::res://Scripts/player.gd<>uid://ba4fmqi87is4r::::res://Scenes/Player/shield.tscn<>uid://d3j4tv2vxb4vl::::res://Scenes/Player/weapon.tscn<>uid://yepgdejeyulk::::res://Scenes/Player/eyes.tscn<>uid://dygmjrgpaai34::::res://Assets/Animations/Player/0001.png<>uid://fhftfiwi0d1f::::res://Assets/Animations/Player/0002.png<>uid://d7lkspl8mclh::::res://Assets/Animations/Player/0003.png<>uid://s3a2llm8ywt5::::res://Assets/Animations/Player/0004.png<>uid://bdusxaohae32q::::res://Assets/Animations/Player/0005.png<>uid://df6ymo3h70cov::::res://Assets/Animations/Player/0006.png<>uid://ds4ff74i6iy55::::res://Assets/Animations/Player/0007.png<>uid://c7abybv48rotk::::res://Assets/Animations/Player/0008.png<>uid://b7peaykhu00vb::::res://Assets/Animations/Player/0009.png
-shield.tscn::PackedScene::2446613507326031251::1745456199::0::1::::<><>::res://Scripts/shield.gd
-weapon.tscn::PackedScene::9144924941290193825::1745456198::0::1::::<><>::res://Scripts/weapon.gd<>uid://5ci25enxvkr1::::res://Assets/Animations/Player/arm.PNG
+EnemyAnimation.tscn::PackedScene::975126940687745203::1745456334::0::1::::<><>::res://Scripts/Enemy/enemy_animation.gd<>uid://cany8ud00n0kd::::res://Scenes/Enemies/Enemy1.tres<>uid://lqjy06hkhjk7::::res://Assets/Animations/Enemy1/head.PNG<>uid://b6nub7uyy7y6n::::res://Assets/Animations/Enemy1/arm.PNG<>uid://b15vrubnd3cru::::res://Assets/Animations/Enemy1/foot 1.PNG<>uid://bja712vhbpwh0::::res://Assets/Animations/Enemy1/foot 2.PNG
+::res://Scenes/Player/::1745456334
+eyes.tscn::PackedScene::1693711392148441712::1745456334::0::1::::<><>::uid://b2tteueryk8of::::res://Assets/Animations/Player/eyes.PNG<>res://Scripts/eyes.gd
+player.tscn::PackedScene::4195755569674811844::1745456334::0::1::::<><>::res://Scripts/player.gd<>uid://ba4fmqi87is4r::::res://Scenes/Player/shield.tscn<>uid://d3j4tv2vxb4vl::::res://Scenes/Player/weapon.tscn<>uid://yepgdejeyulk::::res://Scenes/Player/eyes.tscn<>uid://dygmjrgpaai34::::res://Assets/Animations/Player/0001.png<>uid://fhftfiwi0d1f::::res://Assets/Animations/Player/0002.png<>uid://d7lkspl8mclh::::res://Assets/Animations/Player/0003.png<>uid://s3a2llm8ywt5::::res://Assets/Animations/Player/0004.png<>uid://bdusxaohae32q::::res://Assets/Animations/Player/0005.png<>uid://df6ymo3h70cov::::res://Assets/Animations/Player/0006.png<>uid://ds4ff74i6iy55::::res://Assets/Animations/Player/0007.png<>uid://c7abybv48rotk::::res://Assets/Animations/Player/0008.png<>uid://b7peaykhu00vb::::res://Assets/Animations/Player/0009.png
+shield.tscn::PackedScene::2446613507326031251::1745456334::0::1::::<><>::res://Scripts/shield.gd
+weapon.tscn::PackedScene::9144924941290193825::1745456334::0::1::::<><>::res://Scripts/weapon.gd<>uid://5ci25enxvkr1::::res://Assets/Animations/Player/arm.PNG
 ::res://Scripts/::1745099256
 bullet.gd::GDScript::-1::1745009187::0::1::::<>Area2D<>::
 eyes.gd::GDScript::-1::1745009128::0::1::::<>Sprite2D<>::
@@ -52,4 +52,3 @@ enemy_resource.gd::GDScript::-1::1745098248::0::1::::EnemyStats<>Resource<>::
 ::res://Scripts/Enemy/::1745098081
 enemy.gd::GDScript::-1::1745098081::0::1::::<>CharacterBody2D<>::
 enemy_animation.gd::GDScript::-1::1745044430::0::1::::<>Node2D<>::
-::res://soup-city/::1745022412

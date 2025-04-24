@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3j4tv2vxb4vl"]
+
+[ext_resource type="Script" path="res://Scripts/weapon.gd" id="1_te3qc"]
+[ext_resource type="Texture2D" uid="uid://5ci25enxvkr1" path="res://Assets/Animations/Player/arm.PNG" id="2_bd638"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4aeu"]
+size = Vector2(17, 11)
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 4
+collision_mask = 18
+script = ExtResource("1_te3qc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.5, 0.5)
+shape = SubResource("RectangleShape2D_m4aeu")
+
+[node name="Arm" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-1.823, -0.195)
+scale = Vector2(0.038, 0.038)
+texture = ExtResource("2_bd638")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_top = -5.0
+offset_right = 17.0
+offset_bottom = 6.0
+color = Color(0.632217, 0.416139, 0.276113, 0.698039)
+
+[node name="Reload" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.3
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Reload" to="." method="_on_reload_timeout"]

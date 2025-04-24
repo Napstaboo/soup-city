@@ -1,0 +1,107 @@
+[gd_scene load_steps=10 format=3 uid="uid://n5mg0f3lga16"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy/enemy_animation.gd" id="1_o2rx0"]
+[ext_resource type="Resource" uid="uid://cany8ud00n0kd" path="res://Scenes/Enemies/Enemy1.tres" id="2_jqsw7"]
+[ext_resource type="Texture2D" uid="uid://lqjy06hkhjk7" path="res://Assets/Animations/Enemy1/head.PNG" id="3_psou6"]
+[ext_resource type="Texture2D" uid="uid://b6nub7uyy7y6n" path="res://Assets/Animations/Enemy1/arm.PNG" id="4_ui8le"]
+[ext_resource type="Texture2D" uid="uid://b15vrubnd3cru" path="res://Assets/Animations/Enemy1/foot 1.PNG" id="5_ptdh4"]
+[ext_resource type="Texture2D" uid="uid://bja712vhbpwh0" path="res://Assets/Animations/Enemy1/foot 2.PNG" id="6_1k0cb"]
+
+[sub_resource type="Animation" id="Animation_ibes6"]
+resource_name = "LegL"
+length = 0.333033
+loop_mode = 1
+step = 0.333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("skel/Leg_L:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03125, 0.0625, 0.0626, 0.09375, 0.125),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.148353, 0.270526, 0.418879, 0.148353, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("skel/Leg_R:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.03125, 0.0625, 0.09375, 0.125),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.418879, 0.436332, 0.15708, 1.57293e-05]
+}
+
+[sub_resource type="Animation" id="Animation_dvpja"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("skel/Leg_L:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("skel/Leg_R:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tjwo0"]
+_data = {
+"LegL": SubResource("Animation_ibes6"),
+"RESET": SubResource("Animation_dvpja")
+}
+
+[node name="EnemyAnimation" type="Node2D"]
+script = ExtResource("1_o2rx0")
+stats = ExtResource("2_jqsw7")
+
+[node name="skel" type="Node2D" parent="."]
+
+[node name="Head" type="Sprite2D" parent="skel"]
+position = Vector2(7, -271)
+texture = ExtResource("3_psou6")
+
+[node name="Arm_L" type="Sprite2D" parent="skel"]
+position = Vector2(8, -121)
+scale = Vector2(-1, 1)
+texture = ExtResource("4_ui8le")
+
+[node name="Arm_R" type="Sprite2D" parent="skel"]
+position = Vector2(10, -121)
+texture = ExtResource("4_ui8le")
+
+[node name="Leg_L" type="Sprite2D" parent="skel"]
+position = Vector2(-86, 125)
+texture = ExtResource("5_ptdh4")
+
+[node name="Leg_R" type="Sprite2D" parent="skel"]
+position = Vector2(82, 146)
+texture = ExtResource("6_1k0cb")
+
+[node name="Body" type="Node2D" parent="skel"]
+
+[node name="Sprite2D" type="Sprite2D" parent="skel/Body"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tjwo0")
+}

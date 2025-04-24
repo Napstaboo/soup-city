@@ -1,0 +1,8 @@
+res://Scenes/Enemy1.tscn
+res://Scenes/Player/player.tscn
+res://Scenes/Player/weapon.tscn
+res://Game.tscn
+res://Scenes/Bullet.tscn
+res://Scenes/Player/shield.tscn
+res://Scenes/Player/eyes.tscn
+res://Scenes/Enemies/EnemyAnimation.tscn

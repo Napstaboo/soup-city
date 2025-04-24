@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bmeh057vd3img"]
+
+[node name="Camera2D" type="Camera2D"]
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 2.0

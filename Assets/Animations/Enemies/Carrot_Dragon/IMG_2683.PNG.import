@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lqjy06hkhjk7"
-path="res://.godot/imported/head.PNG-8f7bb7931f3e9209cc059949480d3204.ctex"
+uid="uid://bvof6afnnuhx6"
+path="res://.godot/imported/IMG_2683.PNG-f13b2c1fc428232f5a3a1315447cea0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Animations/Enemy1/head.PNG"
-dest_files=["res://.godot/imported/head.PNG-8f7bb7931f3e9209cc059949480d3204.ctex"]
+source_file="res://Assets/Animations/Enemies/Carrot_Dragon/IMG_2683.PNG"
+dest_files=["res://.godot/imported/IMG_2683.PNG-f13b2c1fc428232f5a3a1315447cea0f.ctex"]
 
 [params]
 

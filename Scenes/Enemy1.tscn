@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Enemy/enemy.gd" id="1_1hqhs"]
 [ext_resource type="Texture2D" uid="uid://bfwxbcsn2ecaa" path="res://Assets/Elf.png" id="1_qdh3v"]
-[ext_resource type="Resource" uid="uid://cany8ud00n0kd" path="res://Scenes/Enemies/Enemy1.tres" id="2_rjd5d"]
+[ext_resource type="Resource" uid="uid://cany8ud00n0kd" path="res://Scenes/Enemies/Enemy1Stats.tres" id="2_rjd5d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u8lcp"]
 radius = 10.4403

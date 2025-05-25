@@ -10,4 +10,10 @@ class_name EnemyStats
 @export var move_jitter = 50
 
 @export var health = 3
-@export var sprite: Texture
+
+@export var head: Texture
+@export var arm_l: Texture
+@export var arm_r: Texture
+@export var leg_l: Texture
+@export var leg_r: Texture
+@export var body: Texture

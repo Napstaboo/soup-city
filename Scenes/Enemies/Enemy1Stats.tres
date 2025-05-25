@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cj7brgg78ryi4" path="res://Scenes/Bullet.tscn" id="1_1kdh3"]
 [ext_resource type="Script" path="res://Scripts/Custom Resources/enemy_resource.gd" id="1_ht0vs"]
-[ext_resource type="Texture2D" uid="uid://c3bkwu3gt4w2t" path="res://Assets/Animations/Enemy1/body.PNG" id="3_yqxbp"]
+[ext_resource type="Texture2D" uid="uid://c3bkwu3gt4w2t" path="res://Assets/Animations/Enemies/Enemy1/body.PNG" id="3_yqxbp"]
 
 [resource]
 script = ExtResource("1_ht0vs")

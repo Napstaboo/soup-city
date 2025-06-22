@@ -1,12 +1,28 @@
-[gd_scene load_steps=13 format=3 uid="uid://n5mg0f3lga16"]
+[gd_scene load_steps=12 format=3 uid="uid://n5mg0f3lga16"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy/enemy_animation.gd" id="1_o2rx0"]
-[ext_resource type="Resource" uid="uid://cany8ud00n0kd" path="res://Scenes/Enemies/Enemy1Stats.tres" id="2_jqsw7"]
 [ext_resource type="Texture2D" uid="uid://bvof6afnnuhx6" path="res://Assets/Animations/Enemies/Carrot_Dragon/IMG_2683.PNG" id="3_pv87u"]
 [ext_resource type="Texture2D" uid="uid://do80tvm7bp0vp" path="res://Assets/Animations/Enemies/Carrot_Dragon/IMG_2680.PNG" id="4_w06cl"]
 [ext_resource type="Texture2D" uid="uid://iyww1476pxlv" path="res://Assets/Animations/Enemies/Carrot_Dragon/IMG_2681.PNG" id="5_i18m7"]
 [ext_resource type="Texture2D" uid="uid://csu73w8wcqlq1" path="res://Assets/Animations/Enemies/Carrot_Dragon/LegL.PNG" id="6_unvvu"]
 [ext_resource type="Texture2D" uid="uid://de7m1f626f7j" path="res://Assets/Animations/Enemies/Carrot_Dragon/LegR.PNG" id="7_67tf0"]
+
+[sub_resource type="Animation" id="Animation_xevqr"]
+resource_name = "Idle"
+loop_mode = 1
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.95)]
+}
 
 [sub_resource type="Animation" id="Animation_dvpja"]
 length = 0.001
@@ -70,6 +86,32 @@ tracks/4/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skel/Head/Eye:scale:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skel/Head/Eye:scale:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_gjo8u"]
+resource_name = "Shoot"
+step = 0.0833333
 
 [sub_resource type="Animation" id="Animation_ibes6"]
 resource_name = "Walk"
@@ -137,27 +179,6 @@ tracks/4/keys = {
 "values": [-0.0104165, -0.110307, -0.0104165, -0.110307]
 }
 
-[sub_resource type="Animation" id="Animation_xevqr"]
-resource_name = "Idle"
-loop_mode = 1
-step = 0.0833333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Skel:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1, 0.95)]
-}
-
-[sub_resource type="Animation" id="Animation_gjo8u"]
-resource_name = "Shoot"
-step = 0.0833333
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tjwo0"]
 _data = {
 "Idle": SubResource("Animation_xevqr"),
@@ -168,7 +189,6 @@ _data = {
 
 [node name="EnemyAnimation" type="Node2D"]
 script = ExtResource("1_o2rx0")
-stats = ExtResource("2_jqsw7")
 
 [node name="Skel" type="Node2D" parent="."]
 
@@ -185,8 +205,11 @@ position = Vector2(-85, -534)
 [node name="Sprite2D" type="Sprite2D" parent="Skel/Head"]
 texture = ExtResource("4_w06cl")
 
-[node name="Img2681" type="Sprite2D" parent="Skel/Head"]
-position = Vector2(10, -13)
+[node name="Eye" type="Node2D" parent="Skel/Head"]
+position = Vector2(-74.2628, -262.694)
+
+[node name="Img2681" type="Sprite2D" parent="Skel/Head/Eye"]
+position = Vector2(83.7768, 253.178)
 texture = ExtResource("5_i18m7")
 
 [node name="Arm_L" type="Node2D" parent="Skel"]

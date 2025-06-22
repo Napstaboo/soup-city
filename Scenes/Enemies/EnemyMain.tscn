@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dijiulsu0xh5q"]
+
+[ext_resource type="Script" path="res://Scripts/Enemy/enemy.gd" id="1_1hqhs"]
+[ext_resource type="Resource" uid="uid://cany8ud00n0kd" path="res://Scenes/Enemies/CarrotDragon/CarrotDragon.tres" id="2_rjd5d"]
+[ext_resource type="PackedScene" uid="uid://n5mg0f3lga16" path="res://Scenes/Enemies/EnemyAnimation.tscn" id="3_6os4j"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_20uu1"]
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 32
+script = ExtResource("1_1hqhs")
+stats = ExtResource("2_rjd5d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_20uu1")
+
+[node name="StunTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+process_callback = 0
+wait_time = 0.5
+
+[node name="ShootTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 3.0
+
+[node name="EnemyAnimation" parent="." instance=ExtResource("3_6os4j")]
+stats = ExtResource("2_rjd5d")
+
+[connection signal="timeout" from="StunTimer" to="." method="_on_stun_timer_timeout"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

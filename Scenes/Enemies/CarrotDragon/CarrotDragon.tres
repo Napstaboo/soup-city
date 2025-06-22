@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=8 format=3 uid="uid://cany8ud00n0kd"]
+
+[ext_resource type="Texture2D" uid="uid://bvof6afnnuhx6" path="res://Assets/Animations/Enemies/Carrot_Dragon/IMG_2683.PNG" id="1_flu88"]
+[ext_resource type="PackedScene" uid="uid://ciiw1sgt7ar5x" path="res://Scenes/Enemies/CarrotDragon/CarrotBullet.tscn" id="2_0v3qe"]
+[ext_resource type="Texture2D" uid="uid://iyww1476pxlv" path="res://Assets/Animations/Enemies/Carrot_Dragon/IMG_2681.PNG" id="3_r6oja"]
+[ext_resource type="Texture2D" uid="uid://do80tvm7bp0vp" path="res://Assets/Animations/Enemies/Carrot_Dragon/IMG_2680.PNG" id="4_cp4pp"]
+[ext_resource type="Texture2D" uid="uid://csu73w8wcqlq1" path="res://Assets/Animations/Enemies/Carrot_Dragon/LegL.PNG" id="5_imm7i"]
+[ext_resource type="Texture2D" uid="uid://de7m1f626f7j" path="res://Assets/Animations/Enemies/Carrot_Dragon/LegR.PNG" id="6_tj4uj"]
+[ext_resource type="Script" path="res://Scripts/Custom Resources/enemy_resource.gd" id="7_las8u"]
+
+[resource]
+script = ExtResource("7_las8u")
+bullet = ExtResource("2_0v3qe")
+attraction = 4
+repulsion = 7500
+separation = -1500
+acceleration = 2
+move_jitter = 50
+health = 3
+head = ExtResource("4_cp4pp")
+eyes = ExtResource("3_r6oja")
+leg_l = ExtResource("5_imm7i")
+leg_r = ExtResource("6_tj4uj")
+body = ExtResource("1_flu88")

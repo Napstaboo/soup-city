@@ -4,6 +4,7 @@ extends CharacterBody2D
 var player: Node2D
 var bullet: PackedScene
 
+
 #movement
 var attraction
 var repulsion
@@ -16,7 +17,6 @@ var health
 
 var is_stunned = false
 var can_shoot = true
-
 
 func _ready() -> void:
 	attraction = stats.attraction
@@ -75,17 +75,13 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	#shooting
-	#if shoot_timer < 0.1:
 	if can_shoot:
-		var chance = randf_range(0, 1)
-		if chance > 0.25 && !is_stunned:
-			#shoot(pl_direction)
+		if !is_stunned:
+			shoot(pl_direction)
 			pass
-		#shoot_timer = shoot_duration
 		can_shoot = false
 		#print("stun is " + str(is_stunned))
 		%ShootTimer.start()
-	#else: shoot_timer -= _delta
 	
 	
 func shoot(direction):

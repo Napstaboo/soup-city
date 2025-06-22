@@ -12,6 +12,7 @@ class_name EnemyStats
 @export var health = 3
 
 @export var head: Texture
+@export var eyes: Texture
 @export var arm_l: Texture
 @export var arm_r: Texture
 @export var leg_l: Texture

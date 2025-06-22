@@ -1,29 +1,73 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtfrjc4k7jvma"]
+[gd_scene load_steps=7 format=3 uid="uid://dtfrjc4k7jvma"]
 
 [ext_resource type="PackedScene" uid="uid://b01pqmkcjf2gu" path="res://Scenes/Player/player.tscn" id="1_6ikoc"]
 [ext_resource type="PackedScene" uid="uid://bnhk5ow18xlyu" path="res://Scenes/Settings.tscn" id="3_ed6p8"]
-[ext_resource type="PackedScene" uid="uid://dijiulsu0xh5q" path="res://Scenes/Enemy1.tscn" id="4_fplg3"]
+[ext_resource type="PackedScene" uid="uid://7hvhlflwr6cg" path="res://Scenes/Enemies/CarrotDragon/Carrot1.tscn" id="4_0i8c6"]
 [ext_resource type="PackedScene" uid="uid://bmeh057vd3img" path="res://Scenes/camera_2d.tscn" id="4_mp87v"]
+[ext_resource type="Texture2D" uid="uid://bnumfqbf8xw8x" path="res://Assets/Backgrounds/Board1.PNG" id="4_yi3t0"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r6m5h"]
 
 [node name="Game" type="Node2D" groups=["Enemies", "Player"]]
 
-[node name="Enemy4" parent="." instance=ExtResource("4_fplg3")]
-position = Vector2(-46, 72)
-
-[node name="Enemy3" parent="." instance=ExtResource("4_fplg3")]
-position = Vector2(63, 44)
-
-[node name="Enemy2" parent="." instance=ExtResource("4_fplg3")]
-position = Vector2(7, -50)
-
-[node name="Enemy" parent="." instance=ExtResource("4_fplg3")]
-position = Vector2(-56, -39)
-
 [node name="Player" parent="." instance=ExtResource("1_6ikoc")]
-
-[node name="Camera2D" parent="Player" instance=ExtResource("4_mp87v")]
-position = Vector2(0, 2)
-zoom = Vector2(5.695, 5.695)
-rotation_smoothing_enabled = false
+collision_mask = 32
 
 [node name="Settings" parent="." instance=ExtResource("3_ed6p8")]
+
+[node name="Enemy" parent="." instance=ExtResource("4_0i8c6")]
+position = Vector2(-33, -45)
+
+[node name="Enemy2" parent="." instance=ExtResource("4_0i8c6")]
+position = Vector2(33, -47)
+
+[node name="Enemy4" parent="." instance=ExtResource("4_0i8c6")]
+position = Vector2(-34, 52)
+
+[node name="Enemy3" parent="." instance=ExtResource("4_0i8c6")]
+position = Vector2(53, -19)
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2(2.38419e-07, 2)
+scale = Vector2(-0.033, -0.033)
+
+[node name="Board1" type="Sprite2D" parent="Background"]
+z_index = -10
+position = Vector2(-5.1204e-06, -85.9061)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("4_yi3t0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Background"]
+collision_layer = 32
+collision_mask = 23
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/StaticBody2D"]
+position = Vector2(-0.000244141, 2319.46)
+scale = Vector2(6.355, 6.355)
+shape = SubResource("WorldBoundaryShape2D_r6m5h")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Background/StaticBody2D"]
+position = Vector2(-1782.55, -150.335)
+rotation = 1.5708
+scale = Vector2(6.355, 6.355)
+shape = SubResource("WorldBoundaryShape2D_r6m5h")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Background/StaticBody2D"]
+position = Vector2(1825.5, -85.9063)
+rotation = -1.56552
+scale = Vector2(6.355, 6.355)
+shape = SubResource("WorldBoundaryShape2D_r6m5h")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Background/StaticBody2D"]
+position = Vector2(-0.000244141, -2491.28)
+rotation = -3.14159
+scale = Vector2(6.355, 6.355)
+shape = SubResource("WorldBoundaryShape2D_r6m5h")
+
+[node name="Camera2D" parent="Background" instance=ExtResource("4_mp87v")]
+position = Vector2(-21.4765, -107.383)
+scale = Vector2(21.4765, 21.4765)
+zoom = Vector2(4.05, 4.05)
+limit_smoothed = true
+position_smoothing_speed = 5.0
+rotation_smoothing_enabled = false

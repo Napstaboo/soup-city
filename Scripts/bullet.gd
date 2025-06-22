@@ -1,6 +1,7 @@
 extends Area2D
 
-var speed = 100
+@export var speed = 100
+@export var explosion: PackedScene
 var direction = Vector2.ZERO
 var age = 10
 var damage_amount = 1
@@ -17,10 +18,14 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	age -= delta
 	if age < 0.1:
-		queue_free()
+		destroy()
 		
 		
 func destroy():
+	print("spawning")
+	var e = explosion.instantiate()
+	e.global_position = global_position
+	get_tree().root.add_child(e)
 	queue_free()
 
 
@@ -29,8 +34,8 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("damage"):
 			#print("hit!")
 			body.damage(damage_amount)
-			queue_free()
-	queue_free()
+			destroy()
+	destroy()
 	
 
 func _on_area_entered(area: Area2D) -> void:
@@ -38,5 +43,5 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.has_method("damage"):
 			#print("hit!")
 			area.damage(damage_amount)
-			queue_free()
-	queue_free()
+			destroy()
+	destroy()
